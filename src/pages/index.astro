@@ -30,6 +30,49 @@ import CourseCard from "../components/CourseCard.astro";
       <p class="fine-print">Kursformate, Altersgruppen, Zeiten und Starttermin werden nach Abschluss der entsprechenden Ausbildung bekannt gegeben.</p>
     </section>
 
+<section class="section-wrap prices" id="preise">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">PREISE & MITGLIEDSCHAFT</p>
+      <h2>Ein fester Platz.<br /><em>Jede Woche.</em></h2>
+    </div>
+    <p>
+      Gemeinsam tanzen, regelmäßig bewegen und Teil einer
+      fröhlichen Gruppe werden. Mit einer monatlichen
+      Mitgliedschaft hast du deinen festen Platz bei Bonita.
+    </p>
+  </div>
+
+  <div class="price-grid">
+    <article class="price-card">
+      <p class="eyebrow">FÜR KINDER</p>
+      <h3>Kids Jr. & Kids</h3>
+      <p>Dein fester Platz in einer wöchentlichen Tanzstunde.</p>
+      <ul>
+        <li>Eine feste Tanzstunde pro Woche</li>
+        <li>Monatlicher Mitgliedsbeitrag</li>
+        <li>Gemeinsam tanzen und Spaß haben</li>
+      </ul>
+    </article>
+
+    <article class="price-card">
+      <p class="eyebrow">FÜR TEENS & ERWACHSENE</p>
+      <h3>Teens & Adults</h3>
+      <p>Musik an, Alltag aus – deine wöchentliche Auszeit.</p>
+      <ul>
+        <li>Eine feste Tanzstunde pro Woche</li>
+        <li>Monatlicher Mitgliedsbeitrag</li>
+        <li>Bewegung, Musik und Gemeinschaft</li>
+      </ul>
+    </article>
+  </div>
+
+  <p class="price-note">
+    Die Preise und Mitgliedschaftsbedingungen werden vor Kursstart bekannt gegeben.
+  </p>
+</section>
+
+
     <section class="about-section" id="ueber-mich">
       <div class="about-mark">B.</div>
       <div class="about-copy">
@@ -185,6 +228,62 @@ h2{font-size:clamp(38px,5vw,58px);line-height:1.08;margin-bottom:0}
    object-fit: contain;
  }
 }
+
+.prices {
+  background: var(--ivory);
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 45px;
+}
+
+.price-card {
+  background: var(--paper);
+  padding: 35px;
+  border: 1px solid rgba(128, 104, 93, 0.15);
+}
+
+.price-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 15px 0;
+}
+
+.price-card p:not(.eyebrow) {
+  color: #76685f;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.price-card ul {
+  padding-left: 18px;
+  color: var(--taupe);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.price-note {
+  margin-top: 25px;
+  color: #8e7e73;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card {
+    padding: 25px;
+  }
+}
+
 </style>
 
 <script>
