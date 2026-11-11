@@ -41,15 +41,17 @@ import CourseCard from "../components/CourseCard.astro";
     </p>
   </div>
 
-  <div class="section-heading course-heading">
-    <div>
-      <p class="eyebrow">UNSERE KURSE</p>
-      <h2>Finde deinen <em>Rhythmus.</em></h2>
-    </div>
-    <p>
-      Ganz egal, wie alt du bist, welches Geschlecht du hast oder ob du gerade erst anfängst: Bei Bonita findest du deinen Platz.
-    </p>
+
+<div class="section-heading course-heading">
+  <div>
+    <p class="eyebrow">FÜR KLEINE & GROSSE TANZFANS</p>
+    <h2>Unsere <em>Kurse.</em></h2>
   </div>
+  <p>
+    Finde deinen Rhythmus. Ganz egal, wie alt du bist, welches Geschlecht du hast oder ob du gerade erst anfängst: Bei Bonita findest du deinen Platz.
+  </p>
+</div>
+
 
   <div class="course-grid">
   <CourseCard
@@ -159,7 +161,7 @@ import CourseCard from "../components/CourseCard.astro";
           <option value="">Bitte auswählen</option>
           <option>Zumba Kids Jr.</option>
           <option>Zumba Kids</option>
-          <option>Teens & Adults</option>
+          <option>Zumba Teens & Adults</option>
           <option>Ich bin noch unsicher</option>
         </select>
         <label for="time">Welche Tage oder Uhrzeiten passen dir?</label>
@@ -278,7 +280,6 @@ h2{font-size:clamp(38px,5vw,58px);line-height:1.08;margin-bottom:0}
 .course-subtitle{font-size:10px;letter-spacing:1.3px;color:var(--terracotta);text-transform:uppercase;margin:22px 0 8px}
 .course-card h3{font-family:"Playfair Display",serif;font-size:27px;font-weight:500;margin-bottom:10px}
 .course-card p:not(.course-subtitle){font-size:12px;color:#766b64;line-height:1.7}
-.text-link{font-size:11px;font-weight:700;color:var(--terracotta);margin-top:20px}
 .fine-print{font-size:10px;color:#95877d;line-height:1.7;margin-top:20px}
 .about-section{background:#e9e3da;padding:100px clamp(22px,14vw,200px);display:grid;grid-template-columns:.65fr 1.35fr;gap:60px;align-items:center}
 .about-mark{font-family:"Playfair Display",serif;font-size:clamp(120px,20vw,230px);line-height:1;color:var(--rose);text-align:center}
@@ -406,4 +407,20 @@ form?.addEventListener("submit", (event) => {
   event.preventDefault();
   if (status) status.textContent = "Danke! Dieses Formular ist noch nicht verbunden. Bitte melde dich vorerst direkt per E-Mail.";
 });
+</script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const selectedCourse = params.get("kurs");
+
+  const courseSelect = document.querySelector<HTMLSelectElement>("#course");
+
+  if (selectedCourse && courseSelect) {
+    const matchingOption = Array.from(courseSelect.options).find(
+      (option) => option.textContent?.trim() === selectedCourse
+    );
+
+    if (matchingOption) {
+      courseSelect.value = matchingOption.value || matchingOption.textContent || "";
+    }
+  }
 </script>
