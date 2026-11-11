@@ -1,10 +1,16 @@
 <section class="hero section-wrap" id="start">
   <div class="hero-copy">
-    <p class="eyebrow"><span class="eyebrow-dot"></span> BALD IN WIETZENDORF</p>
-    <h1>Musik an.<br /><em>Alltag aus.</em></h1>
-    <p class="hero-lead">Dein Ort zum Tanzen, Lachen und Wohlfühlen.</p>
+    <p class="eyebrow">
+       HIER TANZT DAS LEBEN.
+    </p>
+
+    <h1>Musik an.<br /><em>Sorgen aus.</em></h1>
+
+    <p class="hero-lead">
+      Dein Ort zum Tanzen, Lachen und Wohlfühlen.
+    </p>
     <p class="hero-text">Ein Ort, an dem Freude an Musik wichtiger ist als perfekte Tanzschritte. Komm so, wie du bist – und beweg dich mit uns.</p>
-    <a class="button" href="#interesse">Ich möchte dabei sein <span aria-hidden="true">↗</span></a>
+    <a class="button" href="#interesse">Ich will mittanzen <span aria-hidden="true">↗</span></a>
     <p class="hero-note">Für Kinder, Jugendliche und Erwachsene · Wietzendorf</p>
   </div>
   <div class="hero-art" aria-label="Abstrakte, warme Formen als Platzhalter für ein Tanzfoto">
@@ -44,6 +50,7 @@
   font-size: 22px;
   color: var(--taupe);
   margin-bottom: 12px;
+  margin-left: 8px;
 }
 
 .hero-text {
@@ -52,6 +59,7 @@
   line-height: 1.8;
   font-size: 14px;
   margin-bottom: 28px;
+  margin-left: 8px;
 }
 
 .hero-note {
@@ -129,6 +137,39 @@
 .art-stamp i {
   color: #f6e6d7;
 }
+
+.hero .eyebrow {
+  display: flex;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: var(--terracotta);
+  margin-bottom: 0;
+  margin-left: 12px;
+}
+
+.hero .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  border: 0;
+  background: var(--terracotta);
+  color: white;
+  padding: 16px 21px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+
+.hero .button:hover {
+  background: #9e5c48;
+}
+
 
 @media (max-width: 760px) {
   .hero {

@@ -1,12 +1,16 @@
+
 ---
-const { number, title, subtitle, description, tag } = Astro.props;
+const { title, description } = Astro.props;
+const interestUrl = `#interesse?kurs=${encodeURIComponent(title)}`;
 ---
+
 <article class="course-card">
-  <div class="course-top"><span>{number}</span><span class="course-tag">{tag}</span></div>
+  <div class="course-top"></div>
   <div>
-    <p class="course-subtitle">{subtitle}</p>
     <h3>{title}</h3>
     <p>{description}</p>
   </div>
-  <a href="#interesse" class="text-link">Interesse anmelden <span aria-hidden="true">↗</span></a>
+  <a href={interestUrl} class="text-link">
+    Interesse anmelden <span aria-hidden="true">↗</span>
+  </a>
 </article>
