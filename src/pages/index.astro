@@ -68,7 +68,7 @@ import CourseCard from "../components/CourseCard.astro";
   </div>
 
   <p class="fine-print">
-    Kursformate, Altersgruppen, Zeiten und Starttermin werden nach Abschluss der entsprechenden Ausbildung bekannt gegeben.
+    Welche Kurse wann starten, erfährst du rechtzeitig zur Eröffnung von Tanzstudio Bonita.
   </p>
 
 </section>
@@ -124,7 +124,6 @@ import CourseCard from "../components/CourseCard.astro";
   </div>
 
   <p class="price-note">
-    Die Mitgliedschaft startet mit einer Mindestlaufzeit von drei Monaten.
     Preise und weitere Mitgliedschaftsbedingungen werden vor Kursstart bekannt gegeben.
   </p>
 </section>
@@ -133,60 +132,80 @@ import CourseCard from "../components/CourseCard.astro";
 
 <section class="about" id="ueber-mich">
   <div class="about-content">
-    <div class="about-text">
-      <p class="eyebrow">SCHÖN, DASS DU DA BIST</p>
 
-      <h2>
-        Mehr als Tanzen.
-        <span>Fitness, die Spaß macht.</span>
-      </h2>
-      <h3 class="about-intro">Hallo, ich bin Cristina! 😊</h3>
-      <p>
-        Ich komme ursprünglich aus Spanien, bin Mama von zwei kleinen Mädchen
-        und arbeite im Alltag als Softwareentwicklerin. Mein Leben ist also
-        ziemlich abwechslungsreich – und manchmal auch ganz schön turbulent!
-      </p>
+<div class="about-text">
+  <p class="eyebrow">SCHÖN, DASS DU DA BIST</p>
 
-      <p>
-        Einen besonderen Platz in meinem Leben hat aber schon immer das Tanzen.
-        Für mich bedeutet es Lebensfreude, Energie, Freiheit.
-        Es ist mein Ausgleich zum Alltag, mein persönlicher Moment zum Abschalten und Auftanken.
-        Selbst nach einem langen Tag, wenn die Kinder schlafen
-        und ich eigentlich müde bin, gibt es kaum etwas
-        Schöneres, als die Musik aufzudrehen und einfach loszutanzen.
-      </p>
+  <h2>
+    Mehr als Tanzen.
+    <span>Fitness, die Spaß macht.</span>
+  </h2>
 
-      <p>
-        Tanzen lag mir irgendwie schon immer im Blut.
-        Immer wieder wurde ich gefragt, ob ich früher Tanzunterricht hatte.
-        Gleichzeitig liebe ich es, kreativ zu sein, neue Kombinationen auszuprobieren
-        und eigene Choreografien zu entwickeln. Für mich ist es besonders schön,
-        Musik und Bewegung miteinander zu verbinden und dabei immer wieder Neues entstehen zu lassen.
-      </p>
-      <p>
-      Jetzt gehe ich den nächsten Schritt und mache meine Leidenschaft zum nebenberuf:
-      In November 2026 habe ich meine Zumba-Ausbildung abgeschlossen und freue mich darauf,
+  <h3 class="about-intro">Hallo, ich bin Cristina! 🌻</h3>
+
+  <!-- Always visible -->
+  <p>
+    Ich komme ursprünglich aus Spanien, bin Mama von zwei kleinen Mädchen
+    und arbeite im Alltag als Softwareentwicklerin. Mein Leben ist also
+    ziemlich abwechslungsreich – und manchmal auch ganz schön turbulent!
+  </p>
+
+  <!-- Collapsible content -->
+  <div class="about-more" id="about-more">
+
+    <p>
+      Einen besonderen Platz in meinem Leben hat aber schon immer das Tanzen.
+      Für mich bedeutet es Lebensfreude, Energie, Freiheit.
+      Es ist mein Ausgleich zum Alltag, mein persönlicher Moment zum Abschalten und Auftanken.
+      Selbst nach einem langen Tag, wenn die Kinder schlafen
+      und ich eigentlich müde bin, gibt es kaum etwas
+      Schöneres, als die Musik aufzudrehen und einfach loszutanzen.
+    </p>
+
+    <p>
+      Tanzen lag mir irgendwie schon immer im Blut.
+      Immer wieder wurde ich gefragt, ob ich früher Tanzunterricht hatte.
+      Gleichzeitig liebe ich es, kreativ zu sein, neue Kombinationen auszuprobieren
+      und eigene Choreografien zu entwickeln. Für mich ist es besonders schön,
+      Musik und Bewegung miteinander zu verbinden und dabei immer wieder Neues entstehen zu lassen.
+    </p>
+
+    <p>
+      Jetzt gehe ich den nächsten Schritt und mache meine Leidenschaft zum Nebenberuf:
+      Im November 2026 habe ich meine Zumba-Ausbildung abgeschlossen und freue mich darauf,
       meine Begeisterung künftig auch als offizielle Zumba-Trainerin weiterzugeben.
-      </p>
-      <p>
-        Irgendwann kam mir die Idee: Warum nicht aus etwas,
-        das mich selbst so glücklich macht, etwas schaffen,
-        das auch andere begeistert?
-      </p>
+    </p>
 
-      <p>
-        Mit Tanzstudio Bonita möchte ich genau diesen Traum
-        verwirklichen: einen herzlichen Ort schaffen, an dem
-        Menschen zusammenkommen, sich bewegen, lachen und
-        gemeinsam eine schöne Zeit haben. Ganz ohne
-        Leistungsdruck, ohne perfekte Tanzschritte – dafür
-        mit ganz viel Musik, Energie und Lebensfreude.
-      </p>
+    <p>
+      Irgendwann kam mir die Idee: Warum nicht aus etwas,
+      das mich selbst so glücklich macht, etwas schaffen,
+      das auch andere begeistert?
+    </p>
 
-      <p class="signature">
-        Ich freue mich darauf, diese Freude mit euch zu teilen!
-      </p>
-    </div>
+    <p>
+      Mit Tanzstudio Bonita möchte ich genau diesen Traum
+      verwirklichen: einen herzlichen Ort schaffen, an dem
+      Menschen zusammenkommen, sich bewegen, lachen und
+      gemeinsam eine schöne Zeit haben. Ganz ohne
+      Leistungsdruck, ohne perfekte Tanzschritte – dafür
+      mit ganz viel Musik, Energie und Lebensfreude.
+    </p>
+
+    <p class="signature">
+      Ich freue mich darauf, diese Freude mit euch zu teilen!
+    </p>
+
+  </div>
+
+  <button
+    class="about-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="about-more"
+  >
+    Mehr über mich <span aria-hidden="true">↓</span>
+  </button>
+</div>
 
     <div class="about-image-placeholder">
       <!-- Dein persönliches Foto kommt hier später hin -->
@@ -203,7 +222,6 @@ import CourseCard from "../components/CourseCard.astro";
           <h2>Ein Ort zum <em>Wohlfühlen.</em></h2>
         </div>
         <p>Unser Studio entsteht in Wietzendorf und befindet sich gerade im Aufbau.
-         Schritt für Schritt entsteht ein Ort, an dem Freude an Musik, Bewegung und Gemeinschaft im Mittelpunkt stehen.
          Begleite uns auf dem Weg zur Eröffnung!</p>
       </div>
       <div class="studio-placeholder">
@@ -473,7 +491,37 @@ h2{font-size:clamp(38px,5vw,58px);line-height:1.08;margin-bottom:0}
   font-size: 0.8rem;
 }
 
+/* Read more button */
+.about-toggle {
+  display: none;
+  border: none;
+  background: none;
+  color: var(--terracotta);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 0;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.about-toggle span {
+  margin-left: 6px;
+}
+
+/* Mobile only */
 @media(max-width:760px){
+  .about-toggle {
+    display: inline-block;
+  }
+
+  .about.about--collapsible .about-more {
+    display: none;
+  }
+
+  .about.about--expanded .about-more {
+    display: block;
+  }
   .about-content {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -485,7 +533,6 @@ h2{font-size:clamp(38px,5vw,58px);line-height:1.08;margin-bottom:0}
 .about-image-placeholder {
   max-width: 300px;
   justify-self: center;
-  grid-row: 1;
 }
   .intro-band-inner,
   .courses > .section-heading:first-child {
@@ -529,7 +576,6 @@ h2{font-size:clamp(38px,5vw,58px);line-height:1.08;margin-bottom:0}
      max-width: 340px;
      width: 100%;
      margin: 0 auto;
-     grid-row: 1;
    }
 }
 
@@ -614,3 +660,39 @@ form?.addEventListener("submit", (event) => {
     }
   }
 </script>
+
+
+<script>
+  const aboutSection = document.querySelector('.about');
+  const aboutToggle = document.querySelector('.about-toggle');
+
+  if (aboutSection && aboutToggle) {
+    const mobileQuery = window.matchMedia('(max-width: 760px)');
+
+    function updateAboutLayout() {
+      aboutSection.classList.toggle(
+        'about--collapsible',
+        mobileQuery.matches
+      );
+
+      aboutSection.classList.remove('about--expanded');
+      aboutToggle.setAttribute('aria-expanded', 'false');
+      aboutToggle.innerHTML = 'Mehr über mich <span aria-hidden="true">↓</span>';
+    }
+
+    aboutToggle.addEventListener('click', () => {
+      const expanded = aboutSection.classList.toggle('about--expanded');
+
+      aboutToggle.setAttribute('aria-expanded', String(expanded));
+
+      aboutToggle.innerHTML = expanded
+        ? 'Weniger anzeigen <span aria-hidden="true">↑</span>'
+        : 'Mehr über mich <span aria-hidden="true">↓</span>';
+    });
+
+    mobileQuery.addEventListener('change', updateAboutLayout);
+
+    updateAboutLayout();
+  }
+</script>
+
