@@ -1,21 +1,24 @@
 
 ---
-const { title, description } = Astro.props;
-const interestUrl = `#interesse?kurs=${encodeURIComponent(title)}`;
----
+const { title, description, status } = Astro.props;
+const isPlanned = status === "In Planung";---
 
-<article class="course-card">
+<article class:list={["course-card", { planned: isPlanned }]}>
   <div class="course-top"></div>
-  <div>
+
+  <div class="course-heading">
     <h3>{title}</h3>
-    <p>{description}</p>
+    {status && <span class="course-status">{status}</span>}
   </div>
- <a
-   href={`?kurs=${encodeURIComponent(title)}#interesse`}
-   class="text-link"
- >
-   Interesse anmelden <span aria-hidden="true">↗</span>
- </a>
+
+  <p>{description}</p>
+
+  <a
+    href={`?kurs=${encodeURIComponent(title)}#interesse`}
+    class="text-link"
+  >
+    Interesse anmelden <span aria-hidden="true">↗</span>
+  </a>
 </article>
 <style>
 .text-link {
@@ -39,5 +42,32 @@ const interestUrl = `#interesse?kurs=${encodeURIComponent(title)}`;
 .text-link:hover {
   background: #9e5c48;
   transform: translateY(-2px);
+}
+.course-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-bottom: 16px;
+}
+
+.course-heading h3 {
+  margin: 0;
+}
+
+.course-status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 2px;
+  background: #f1e3dc;
+  color: var(--terracotta);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  white-space: nowrap;
+}
+
+.course-card.planned {
+  opacity: 0.75;
 }
 </style>
